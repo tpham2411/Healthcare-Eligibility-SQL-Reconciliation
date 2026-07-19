@@ -56,10 +56,10 @@ This process provides a repeatable alternative to manually comparing large files
 3. Run `Data Reconciliation.sql`.
 4. Run `Summary Report.sql`.
 
-## Reconciliation Results
+## Data Reconciliation Results
 
-![Data reconciliation results](Data Reconciliation Results.png)
+![Results](Data Reconciliation Results.jpg)
 
-## Summary Results
+## Summary Report
 
-![Reconciliation summary](Reconciliation Summary.png)
+![Summary](Reconciliation Summary.jpg)
