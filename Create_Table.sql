@@ -1,4 +1,3 @@
--- 01_Create_Tables.sql
 -- SQL Server version
 
 IF OBJECT_ID('dbo.Eligibility_Previous', 'U') IS NOT NULL
