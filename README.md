@@ -1,40 +1,69 @@
-# SQL small project
-Project Overview
+# Healthcare Eligibility SQL Reconciliation
 
-This project demonstrates how SQL can be used to validate healthcare eligibility data before it is used for reporting and dashboard development.
-The scenario simulates two Medicaid eligibility datasets received from different reporting periods. The objective is to automatically identify:
-* New members
-* Removed members
-* Updated member information
-* Field-level differences between datasets
-Rather than manually comparing thousands of records in Excel, SQL provides a scalable, repeatable approach to data validation and quality assurance.
-Business Scenario
+## Project overview
 
-Imagine DHHS receives two eligibility extracts.
-* Eligibility_Previous contains last month's data.
-* Eligibility_Current contains this month's data.
+This portfolio project demonstrates how SQL can compare two healthcare eligibility data snapshots and identify new, removed, changed, and unchanged records.
 
-Before reports are built, analysts must verify that the new extract is correct.
-Sample Tables
-Column	Description
-MemberID	Unique member identifier
-ProgramName	Medicaid Program
-County	County
-CoverageStatus	Active / Pending / Inactive
-MonthlyBenefit	Monthly benefit amount
-CaseWorkerID	Assigned caseworker
-SQL Techniques Demonstrated
-* FULL OUTER JOIN
-* CASE statements
-* CONCAT_WS
-* NULL handling
-* Data reconciliation
-* Data quality validation
+The project uses synthetic data only. It does not contain protected health information or real member information.
 
-Business Value
-This approach:
-* reduces manual comparison
-* scales to large datasets
-* improves data quality
-* creates an audit trail
-* supports reliable reporting
+## Business scenario
+
+An analyst receives two eligibility extracts from different reporting periods:
+
+- `Eligibility_Previous`: the earlier snapshot
+- `Eligibility_Current`: the updated snapshot
+
+Before dashboards or reports are refreshed, the analyst needs to verify what changed and confirm the integrity of the latest file.
+
+## Dataset
+
+Each table contains 1,000 synthetic records with these columns:
+
+| Column | Description |
+|---|---|
+| MemberID | Unique member identifier |
+| ProgramName | Medicaid, CHIP, SNAP, or TANF |
+| County | Nebraska county |
+| CoverageStatus | Active, Pending, or Inactive |
+| MonthlyBenefit | Simulated monthly benefit amount |
+| CaseWorkerID | Simulated assigned caseworker |
+
+The current dataset includes realistic changes such as:
+
+- new members
+- removed members
+- coverage-status changes
+- benefit changes
+- county changes
+- caseworker reassignments
+
+## Repository files
+
+- `01_Create_Tables.sql` — creates the SQL Server tables
+- `02_Import_Data_Instructions.sql` — explains how to import the CSV files
+- `03_Data_Reconciliation.sql` — returns all new, removed, and changed records
+- `04_Summary_Report.sql` — summarizes the number of records by difference type
+- `data/Eligibility_Previous.csv` — prior-period dataset
+- `data/Eligibility_Current.csv` — current-period dataset
+
+## SQL techniques demonstrated
+
+- `FULL OUTER JOIN`
+- `CASE`
+- `COALESCE`
+- `ISNULL`
+- `CONCAT_WS`
+- common table expressions
+- record-level and field-level change detection
+
+## Business value
+
+This process provides a repeatable alternative to manually comparing large files in Excel. It can improve data-quality controls, support auditability, and reduce the risk of publishing reports based on incomplete or inconsistent data.
+
+## How to run the project
+
+1. Run `01_Create_Tables.sql`.
+2. Import both CSV files into their corresponding tables.
+3. Run `03_Data_Reconciliation.sql`.
+4. Run `04_Summary_Report.sql`.
+5. Save screenshots of the query and results for the portfolio page.
