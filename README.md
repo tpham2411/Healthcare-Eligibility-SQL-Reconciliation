@@ -58,8 +58,8 @@ This process provides a repeatable alternative to manually comparing large files
 
 ## Data Reconciliation Results
 
-![Results](Data Reconciliation Results.jpg)
+![Results](Data_Reconciliation_Results.jpg)
 
 ## Summary Report
 
-![Summary](Reconciliation Summary.jpg)
+![Summary](Reconciliation_Summary.jpg)
