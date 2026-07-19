@@ -55,3 +55,11 @@ This process provides a repeatable alternative to manually comparing large files
 2. Import both CSV files into their corresponding tables.
 3. Run `Data Reconciliation.sql`.
 4. Run `Summary Report.sql`.
+
+## Reconciliation Results
+
+![Data reconciliation results](Data Reconciliation Results.png)
+
+## Summary Results
+
+![Reconciliation summary](Reconciliation Summary.png)
