@@ -1,4 +1,3 @@
--- 04_Summary_Report.sql
 -- Produces summary metrics for the reconciliation.
 
 WITH Reconciliation AS (
