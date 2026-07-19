@@ -1,4 +1,3 @@
--- 03_Data_Reconciliation.sql
 -- Compares the prior and current eligibility snapshots.
 
 WITH Reconciliation AS (
