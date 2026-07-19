@@ -1,4 +1,4 @@
-# Healthcare-Eligibility-SQL-Reconciliation
+# SQL small project
 Project Overview
 This project demonstrates how SQL can be used to validate healthcare eligibility data before it is used for reporting and dashboard development.
 The scenario simulates two Medicaid eligibility datasets received from different reporting periods. The objective is to automatically identify:
