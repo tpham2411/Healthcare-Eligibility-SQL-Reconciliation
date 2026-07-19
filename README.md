@@ -63,3 +63,16 @@ This process provides a repeatable alternative to manually comparing large files
 ## Summary Report
 
 ![Summary](Reconciliation_Summary.jpg)
+# Key Skills Demonstrated
+
+This project demonstrates my ability to:
+- Compare large healthcare datasets using SQL
+- Validate data before reporting and dashboard development
+- Detect new, removed, and modified records
+- Identify field-level changes for auditing and quality assurance
+- Build repeatable SQL solutions instead of relying on manual Excel comparisons
+
+## Tools Used
+
+- SQL Server Management Studio (SSMS)
+- GitHub
